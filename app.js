@@ -14,6 +14,9 @@ app.use('/api/carts', require('./routes/carts'))
 app.use('/api/orders', require('./routes/orders'))
 app.use('/api/checkout', require('./routes/stripe'))
 
+app.get('/', (req, res) => {
+  res.send('<p>/api/users</p> <p>/api/tickets</p> <p>/api/orders</p> <p>/api/chekout</p>')
+})
 const port = process.env.PORT || 5000
 
 const start = async () => {
